@@ -142,7 +142,7 @@ export default class ZrRuntime {
 		this.level++;
 		this.locals.push();
 
-		if (this.level > 256) {
+		if (this.level > 4096) {
 			this.runtimeError("Stack overflow", ZrRuntimeErrorCode.StackOverflow);
 		}
 	}
